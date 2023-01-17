@@ -1,11 +1,21 @@
-# nova-js
+# Nova.js
 
-This library was generated with [Nx](https://nx.dev).
+Nova.js is a simple library used to interact with the nova discord framework.
 
-## Building
+## Example
+> This example requires a nova instance running, you can do so with the `@discordnova/nova-cli` package wich packages a nova all-in-one instance.
+```js
+import { Client } from "@discordnova/nova-js";
 
-Run `nx build nova-js` to build the library.
+const client = new Client({
+  rest: { api: 'http://localhost:8090' },
+  transport: { queue: 'my-super-bot', nats: { servers: ['localhost:4222'] } },
+});
 
-## Running unit tests
+client.on('messageCreate', async (message) => {
+  console.log('Received a message: ', message.content);
+});
 
-Run `nx test nova-js` to execute the unit tests via [Jest](https://jestjs.io).
+(async () => client.start())();
+```
+
