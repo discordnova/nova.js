@@ -1,0 +1,21 @@
+{
+  "name": "@discordnova/nova-cli",
+  "version": "0.0.1",
+  "type": "module",
+  "dependencies": {
+    "undici": "^5.15.0"
+  },
+  "scripts": {
+    "postinstall": "node src/lib/preinstall.js"
+  },
+  "directories": {
+    "bin": "bin"
+  },
+  "bin": {
+    "nova": "./bin/nova.js"
+  },
+  "files": [
+    "bin/.gitkeep",
+    "bin/nova.js"
+  ]
+}
