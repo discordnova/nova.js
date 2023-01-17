@@ -16,7 +16,7 @@ import {
   Client,
   EventName,
   EventsHandlerArguments,
-} from './client';
+} from './client.js';
 
 /**
  * Options for the nats transport layer

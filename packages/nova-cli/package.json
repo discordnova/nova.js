@@ -8,14 +8,12 @@
   "scripts": {
     "postinstall": "node src/lib/preinstall.js"
   },
-  "directories": {
-    "bin": "bin"
-  },
   "bin": {
     "nova": "./bin/nova.js"
   },
   "files": [
     "bin/.gitkeep",
-    "bin/nova.js"
+    "bin/nova.js",
+    "src/lib/preinstall.js"
   ]
 }

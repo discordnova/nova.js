@@ -1,4 +1,4 @@
-import { EventEmitter } from 'node:stream';
+import { EventEmitter } from 'node:events';
 import { CamelCase, PascalCase } from 'type-fest';
 import { REST, type RESTOptions } from '@discordjs/rest';
 import {
@@ -7,8 +7,8 @@ import {
   type GatewayInteractionCreateDispatchData,
 } from 'discord-api-types/v10';
 import { API } from '@discordjs/core';
-import { Transport, type TransportOptions } from './transport';
-import { TypedEventEmitter } from './emitter';
+import { Transport, type TransportOptions } from './transport.js';
+import { TypedEventEmitter } from './emitter.js';
 
 /**
  * Maps an event name (O['t']) and a Union O and extracts all the union members that have a matching O['t']

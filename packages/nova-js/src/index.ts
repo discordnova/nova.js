@@ -1,1 +1,1 @@
-export * from './lib/nova-client';
+export * from './lib/nova-client.js';
